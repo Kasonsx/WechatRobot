@@ -22,6 +22,7 @@ def response(msg):#robot reply
 	except:
 		print('server has encountered a problem.')
 
+# 私聊回复
 @itchat.msg_register(TEXT)
 def auto_reply(msg):
 	#print(msg.isAt)
@@ -33,6 +34,7 @@ def auto_reply(msg):
 		reply = response(msg['Text'])
 		msg.user.send(reply or default_reply)
 
+# 群聊回复，只有被@才回复
 @itchat.msg_register(TEXT, isGroupChat = True)
 def group_reply(msg):
 	if msg.isAt:
@@ -50,9 +52,8 @@ def ec():#exitCallback
 	print('exit!')
 
 itchat.auto_login(hotReload=True)
-# memberList = itchat.update_chatroom('差点找不到的计机4', detailedMember=True)
-# print(memberList)
-# itchat.search_chatrooms(name='差点找不到的计机4')
+
+# 获取uin，用户或群聊的唯一标识
 @itchat.msg_register(SYSTEM)
 def get_uin(msg):
     if msg['SystemInfo'] != 'uins': return
