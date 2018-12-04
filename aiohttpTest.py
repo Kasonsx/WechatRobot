@@ -72,7 +72,8 @@ async def login(session):
         if response.status == 200:
             print('Login successfully.')
             js = response.json()
-            print(js)
+            formatedData = json.loads(js)
+            print(formatedData)
 
 async def getData(session,url):
     headers['Host'] = "login.sina.com.cn"

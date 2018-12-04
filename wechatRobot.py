@@ -1,4 +1,5 @@
 import itchat
+import sys
 from itchat.content import *
 import requests
 #from itchat.content import *
