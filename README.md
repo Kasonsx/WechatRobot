@@ -1,8 +1,8 @@
 # WechatRobot
-### TODO:
+## TODO
  - auto reply message in wechat
  - reply some types of message using tuling robot
- - crawl silly photo
+ - crawl silly photo(planning to crawl weibo)
 
 ## Environment
  - requests
