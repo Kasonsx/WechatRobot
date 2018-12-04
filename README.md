@@ -1,12 +1,12 @@
 # WechatRobot
+ Replying message in wechat automatically and crawling silly photos when asking.
+  
 ## TODO
- - auto reply message in wechat
- - reply some types of message using tuling robot
- - crawl silly photo(planning to crawl weibo)
+ - [x] auto reply message in wechat by using [tuling robot]('http://www.tuling123.com/') api
+ - [ ] crawl silly photo(planning to crawl weibo)
+   - [ ] simulatly login weibo
 
-## Environment
+## Modules
  - requests
  - parsel(Selector)
- - aiohttp
- - cchardet(optional)
- - aiodns(optional)
+ - aiohttp(learning)
