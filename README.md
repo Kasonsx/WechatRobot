@@ -5,6 +5,8 @@
  - crawl silly photo
 
 ## Environment
+ - requests
+ - parsel(Selector)
  - aiohttp
  - cchardet(optional)
  - aiodns(optional)
