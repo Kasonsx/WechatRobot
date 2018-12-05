@@ -3,8 +3,8 @@
 
 ## TODO
  - [x] auto reply message in wechat by using [tuling robot]('http://www.tuling123.com/') api
- - [ ] crawl silly photo(planning to crawl weibo)
-   - [ ] simulatly login weibo
+ - [ ] crawl silly photo(planning to crawl weibo) (x)
+   - [ ] simulatly login weibo (x)
 
 ## Modules
  - requests
@@ -20,3 +20,7 @@
 ```
  python wechat_robot.py
 ```
+
+## Friendship attachment(proxy needed)
+ - pixiv photo crawling 
+ - yandere photo crawling 

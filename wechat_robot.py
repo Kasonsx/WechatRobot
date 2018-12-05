@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import itchat
 import sys
 from itchat.content import *
