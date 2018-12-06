@@ -23,6 +23,10 @@ def response(msg):#robot reply
 		return result
 	except:
 		print('server has encountered a problem.')
+		
+# 抓取图片进行回复
+def resp_img():
+	pass
 
 # 私聊回复
 @itchat.msg_register(TEXT)
@@ -30,8 +34,10 @@ def auto_reply(msg):
 	#print(msg.isAt)
 	default_reply = 'I received:' + msg['Text']
 	print(msg.FromUserName,':',msg['Text'])
-	if msg.text.find('沙雕图') != -1:
-		msg.user.send('你是女娲捏出来的吗？')
+	if msg.text.find('沙雕') != -1:
+		# itchat.send_image('test.jpg', toUserName=msg.FromUserName)
+		msg.user.send('@img@%s' % 'test.jpg')
+		# msg.user.send('你是女娲捏出来的吗？')
 	else:
 		reply = response(msg['Text'])
 		msg.user.send(reply or default_reply)
@@ -42,8 +48,9 @@ def group_reply(msg):
 	if msg.isAt:
 		default_reply = 'I received:' + msg['Text']
 		print(msg.FromUserName,':',msg['Text'])
-		if msg.text.find('沙雕图') != -1:
-			msg.user.send('你是女娲捏出来的吗？')
+		if msg.text.find('沙雕') != -1:
+			msg.user.send('@img@%s' % 'test.jpg')
+			# msg.user.send('你是女娲捏出来的吗？')
 		elif msg.text == '':
 			msg.user.send('???')
 		else:
