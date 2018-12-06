@@ -7,9 +7,10 @@
    - [ ] simulatly login weibo (x)
 
 ## Modules
- - requests
- - parsel(Selector)
- - aiohttp
+ - itchat: wechat api
+ - requests: web request
+ - parsel(Selector) (optional)
+ - aiohttp (optional)
 
 ## Install dependencies
 ```
@@ -20,6 +21,7 @@
 ```
  python wechat_robot.py
 ```
+ Then, scanning the qrcode to login in.
 
 ## Friendship attachment(proxy needed)
  - pixiv photo crawling 
