@@ -44,6 +44,8 @@ def group_reply(msg):
 		print(msg.FromUserName,':',msg['Text'])
 		if msg.text == '沙雕图':
 			msg.user.send('你是女娲捏出来的吗？')
+		elif msg.text == '':
+			msg.user.send('???')
 		else:
 			reply = response(msg['Text'])
 			msg.user.send(reply or default_reply)
