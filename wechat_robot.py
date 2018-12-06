@@ -3,7 +3,7 @@ import itchat
 import sys
 from itchat.content import *
 import requests
-#from itchat.content import *
+
 API_KEY = 'd1cfba0fde3c44208c1973cb4b88ab51'
 
 def response(msg):#robot reply
@@ -30,7 +30,7 @@ def auto_reply(msg):
 	#print(msg.isAt)
 	default_reply = 'I received:' + msg['Text']
 	print(msg.FromUserName,':',msg['Text'])
-	if msg.text == '沙雕图':
+	if msg.text.find('沙雕图') != -1:
 		msg.user.send('你是女娲捏出来的吗？')
 	else:
 		reply = response(msg['Text'])
@@ -42,7 +42,7 @@ def group_reply(msg):
 	if msg.isAt:
 		default_reply = 'I received:' + msg['Text']
 		print(msg.FromUserName,':',msg['Text'])
-		if msg.text == '沙雕图':
+		if msg.text.find('沙雕图') != -1:
 			msg.user.send('你是女娲捏出来的吗？')
 		elif msg.text == '':
 			msg.user.send('???')
