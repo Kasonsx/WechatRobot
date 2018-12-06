@@ -21,7 +21,7 @@
 ```
  python wechat_robot.py
 ```
- Then, scanning the qrcode to login in.
+ Then, scanning the QR code to login in.
 
 ## Friendship attachment(proxy needed)
  - pixiv photo crawling 
