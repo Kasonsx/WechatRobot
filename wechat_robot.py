@@ -3,6 +3,8 @@ import itchat
 import sys
 from itchat.content import *
 import requests
+import os
+import random
 
 API_KEY = 'd1cfba0fde3c44208c1973cb4b88ab51'
 
@@ -26,8 +28,14 @@ def response(msg):#robot reply
 
 # 抓取图片进行回复
 def get_imgUrl():
-	# TODO：通过爬虫或本地图片库随机获取图片url
-	return 'test.jpg'
+	# TODO：通过爬虫或本地图片库('project_root/image/')随机获取图片url
+	# local directory
+	# print(os.path.abspath('.'))
+	os.chdir('./image/')
+	file_list = [ x for x in os.listdir('.')]
+	rand_img = file_list[random.randrange(len(file_list))]
+	img_path = os.path.join(os.path.abspath('.'), rand_img)
+	return img_path
 
 # 私聊回复
 @itchat.msg_register(TEXT)
