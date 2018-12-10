@@ -7,6 +7,9 @@ import os
 import random
 
 API_KEY = 'd1cfba0fde3c44208c1973cb4b88ab51'
+os.chdir('./image/')
+# get all photos' path once
+file_list = [ x for x in os.listdir('.')]
 
 def response(msg):#robot reply
 	apiUrl = 'http://www.tuling123.com/openapi/api'
@@ -26,13 +29,11 @@ def response(msg):#robot reply
 	except:
 		print('server has encountered a problem.')
 
-# 抓取图片进行回复
+# 返回随机的图片路径
 def get_imgUrl():
-	# TODO：通过爬虫或本地图片库('project_root/image/')随机获取图片url
+	# 本地图片库('project_root/image/')随机获取图片url
 	# local directory
 	# print(os.path.abspath('.'))
-	os.chdir('./image/')
-	file_list = [ x for x in os.listdir('.')]
 	rand_img = file_list[random.randrange(len(file_list))]
 	img_path = os.path.join(os.path.abspath('.'), rand_img)
 	return img_path
