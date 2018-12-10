@@ -3,7 +3,11 @@ QR.png
 ShadiaoTu.txt
 .vscode
 /.vscode
-.vscode/
-./image/
+.vscode/*
+./image/*
 ./image
 image
+*.jpg
+*.jpeg
+*.gif
+*.png
