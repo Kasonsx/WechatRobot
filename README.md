@@ -2,7 +2,8 @@
  Replying message in wechat automatically and crawling silly photos when asking.
 
 ## TODO
- - [x] auto reply message in wechat by using [tuling robot]('http://www.tuling123.com/') api
+ - [x] auto reply message in wechat by using [tuling robot](http://www.tuling123.com/) api
+ - [x] auto send photo when being @ and receiving a message that contains "沙雕"
  - [ ] crawl silly photo(planning to crawl weibo) (x)
    - [ ] simulatly login weibo (x)
 
@@ -25,5 +26,5 @@
  The account info will be stored in a local file to keep logined.
 
 ## Friendship attachment(proxy needed)
- - pixiv photo crawling 
+ - pixiv.net photo crawling 
  - yande.re photo crawling 
