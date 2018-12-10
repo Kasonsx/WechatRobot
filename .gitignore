@@ -1,7 +1,9 @@
 *.pkl
 QR.png
 ShadiaoTu.txt
+.vscode
 /.vscode
 .vscode/
 ./image/
 ./image
+image
