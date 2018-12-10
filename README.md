@@ -17,12 +17,13 @@
  pip install -r requirements.txt
 ```
 
-## Run project 
+## Run the robot 
 ```
  python wechat_robot.py
 ```
  Then, scanning the QR code to login in wechat.
+ The account info will be stored in a local file to keep logined.
 
 ## Friendship attachment(proxy needed)
  - pixiv photo crawling 
- - yandere photo crawling 
+ - yande.re photo crawling 
