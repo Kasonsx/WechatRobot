@@ -21,6 +21,7 @@ def response(msg):#robot reply
 	try:
 		r = requests.post(apiUrl, data=data).json()
 		code = r.get('code')
+		result = '???'
 		if code == 100000: #文本类 "text"就是回复内容
 			result = r.get('text')
 		elif code == 200000: #链接类 实际内容在"url"中
